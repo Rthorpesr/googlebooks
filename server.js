@@ -1,3 +1,5 @@
+console.log("1. Server js");
+
 const express = require("express");
 var mongoose = require('mongoose');
 const path = require("path");
@@ -12,8 +14,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Connect to the Mongo DB
 
+console.log("2. Connecting to googlebooks db");
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
